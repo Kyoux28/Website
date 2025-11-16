@@ -1,0 +1,264 @@
+/* Réinitialisation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Ruban de navigation */
+nav {
+    background-color: #000000;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    margin-right: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav button:hover {
+    background-color: #4b4b72;
+    border-radius: 5px;
+}
+
+/* Sections */
+.section {
+    display: none;
+    padding: 30px;
+    width: 100%;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Active section affichée */
+.section.active {
+    display: block;
+}
+
+/* Contenu aligné à gauche */
+.section h2,
+.section p,
+.section ul {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.certification {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* ✅ aligne le texte en haut du logo */
+    margin: 20px 30px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    gap: 20px;
+}
+
+.cert-logo {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+    margin-top: 5px; /* optionnel, pour ajuster verticalement */
+}
+
+.cert-info {
+    flex: 2;
+    
+}
+
+.cert-file {
+    flex: 1;
+    text-align: right;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #d21717;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #36365a;
+}
+
+
+/*Parte de Experiences 
+/* ---- SECTION EXPERIENCES ---- */
+.experience {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 30px 0;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.exp-logo {
+    flex: 0 0 200px; /* largeur fixe à gauche */
+    text-align: center;
+}
+
+.exp-logo img {
+    width: 100%;
+    max-width: 140px;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.exp-info {
+    flex: 1;
+}
+
+.exp-info h3 {
+    margin: 0 0 5px;
+    color: #333;
+}
+
+.exp-date {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.exp-desc {
+    color: #444;
+    line-height: 1.5;
+}
+
+/* ---- SECTION PROJECTS ---- */
+/* ---- SECTION PROJECTS ---- */
+/* ---- SECTION PROJECTS ---- */
+.project {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f8f8;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+/* ✅ Inversion de l’ordre image / texte pour Projet B */
+.project.reverse {
+    flex-direction: row-reverse;
+    text-align: left;
+}
+
+.project-info {
+    flex: 1;
+    margin: 0 30px;
+    font-size: 24px;
+}
+
+.project-info h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+
+.project-info p {
+    color: #555;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.project-media {
+    flex: 0 0 380px;
+    text-align: center;
+}
+
+.project-media img,
+.project-media video {
+    width: 100%;
+    max-width: 880px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.project.reverse {
+    flex-direction: row-reverse !important;
+}
+
+/* === SECTION HOME === */
+/* === SECTION HOME === */
+/* === SECTION HOME === */
+
+/* Layout uniquement pour la homepage */
+/* ===== Forcer layout uniquement dans la section #home ===== */
+#home.active {
+  display: flex !important;       /* override : s'applique seulement à #home quand active */
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 24px;                  /* optionnel : même look que les autres sections */
+}
+
+/* colonne image (gauche) */
+#home .home-left {
+  flex: 0 0 320px;                /* largeur fixe pour la colonne image */
+}
+#home .home-left img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* colonne texte (droite) */
+#home .home-right {
+  flex: 1 1 auto;
+  min-width: 0;                   /* important pour empêcher overflow */
+}
+
+/* responsive : sur petits écrans empiler verticalement */
+@media (max-width: 700px) {
+  #home.active {
+    flex-direction: column;
+  }
+  #home .home-left {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+}
+
+
